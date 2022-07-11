@@ -1,12 +1,21 @@
 <html>
 <head>
     <title>Weblinks Sample</title>
+    <script type = "text/javascript">  
+         function redirect() {  
+            window.location.href = "https://www.google.com";
+         }  
+    </script>  
 </head>
 <body>
     <ul>
         <li><a href="about:blank">About blank</a></li>
         <li><a href="https://www.google.com">Google</a></li>
         <li><a href="about:blank" target="_blank">About blank in target _blank</a></li>
+        <li><a href="about:blank" target="_blank">About blank in target _blank</a></li>
     </ul>
+    <form>
+        <input type = "button" onclick = "redirect()" value = "Redirect via JS"> 
+    </form>     
 </body>
 </html>
