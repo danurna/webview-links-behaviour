@@ -4,7 +4,20 @@
     <script type = "text/javascript">  
          function redirect() {  
             window.location.href = "https://www.google.com";
-         }  
+         }
+        
+         function talkToApp() {
+            var promise = window.webkit.messageHandlers.sampleMessageHandler.postMessage("Ready");
+    
+            promise.then(
+              function(result) {
+                console.log(result);
+              },
+              function(err) {
+                console.log(err);
+              }
+            );
+         }
     </script>  
 </head>
 <body>
@@ -16,6 +29,7 @@
     </ul>
     <form>
         <input type = "button" onclick = "redirect()" value = "Redirect via JS"> 
+        <input type = "button" onclick = "talkToApp()" value = "Talk to App"> 
     </form>     
 </body>
 </html>
